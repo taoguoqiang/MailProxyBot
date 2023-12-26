@@ -1,6 +1,7 @@
 import smtplib
 import pandas as pd
-from io import StringIO
+import openpyxl
+
 
 from email.mime.text import MIMEText
 # email 用于构建邮件内容
@@ -81,7 +82,10 @@ with tab2:
     uploaded_file = st.file_uploader("请选择接收人员名单文件")
     st.divider()
     if uploaded_file is not None:
+<<<<<<< HEAD
         # Can be used wherever a "file-like" object is accepted:
+=======
+>>>>>>> 915a343... init
         data = pd.read_excel(uploaded_file)
         receiver_address_list = data['邮箱']
         send_message_list = data['链接']
